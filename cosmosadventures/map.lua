@@ -10,7 +10,7 @@ end
 -- renvoi true ou false
 
 function update_camera()
-    local camx=mid(0,p.x-7,5,127-5)
-    local camy=mid(0,p.y-7,5,63-5)
-    camera(camx*8,camy*8)
+    camx=mid(0, (p.x-7.5)*8+p.ox, (31-15)*8)
+    camy=mid(0, (p.y-7.5)*8+p.oy, (31-15)*8)
+    camera(camx, camy)
 end

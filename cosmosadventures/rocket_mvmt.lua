@@ -2,7 +2,7 @@ function create_rocket_fire()
 rocket_fire={
     sprite = 17,
     x = 2,
-    y = 5,  
+    y = 5  
 }
 rocket_fire_anim_time = 0
 rocket_fire_anim_wait = 0.08

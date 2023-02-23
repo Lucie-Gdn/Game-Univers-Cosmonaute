@@ -5,8 +5,9 @@ p={
     y = 6, --holds the vertical position of the player
     ox = 0, oy = 0,
     start_ox=0, start_oy=0,
-    anim_t=0
-    }
+    anim_t=0,  
+} 
+p.speed=15
 end
 
 function draw_player()
@@ -14,7 +15,7 @@ function draw_player()
 end
 
 function player_movement()
-    newx = p.x
+    newx = p.x 
     newy = p.y
     
     if btn(⬅️) then

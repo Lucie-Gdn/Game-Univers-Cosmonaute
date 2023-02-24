@@ -11,30 +11,42 @@ p.speed=15
 end
 
 function draw_player()
-    spr(p.sprite,p.x*8+p.ox,p.y*8+p.oy,1, 1, p.flip)
+spr(p.sprite,p.x*8+p.ox,p.y*8+p.oy,1, 1, p.flip) 
+    if p.anim_t>=0.7 then 
+        p.sprite +=1
+            if p.sprite > 7 then 
+                p.sprite=3
+            end
+    end
+    
 end
 
 function player_movement()
     newx = p.x 
     newy = p.y
     
-    if btn(⬅️) then
-        newx -= 1
-        newox = 8
-        newoy = 0
-        p.flip = true
-    elseif btn(➡️) then
+    if btnp(⬅️) then
+            if p.x!=16 then
+            newx -= 1
+            newox = 8
+            newoy = 0
+            p.flip = true
+            end
+
+    elseif btnp(➡️) then
         newx += 1
         newox = -8
         newoy = 0
         p.flip = false
 
-    elseif btn(⬆️) then
-        newy -= 1
-        newox = 0
-        newoy = 8
+    elseif btnp(⬆️) then
+            if p.x>15 then 
+            newy -= 1
+            newox = 0
+            newoy = 8
+            end
 
-    elseif btn(⬇️) then
+    elseif btnp(⬇️) then
         newy += 1
         newox = 0
         newoy = -8

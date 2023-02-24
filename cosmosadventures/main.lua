@@ -14,10 +14,11 @@ function _update()
 end
     
 function _draw()
-   draw_map() 
-   draw_player()
+   draw_map()
+   change_color() 
    draw_rocket_fire()
    draw_toxic_smoke()
+   draw_player()
    --draw_enemies()
 end
 

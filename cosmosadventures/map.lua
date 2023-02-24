@@ -3,6 +3,10 @@ function draw_map()
     map(0,0,0,0,127,63)   
 end
 
+function change_color()
+    pal(8,136,1)
+end 
+
 function check_flag(flag,x,y)
     local sprite=mget(x,y)
     return fget(sprite,flag)

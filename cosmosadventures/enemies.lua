@@ -1,5 +1,5 @@
 function create_enemies()
-    enemies={
+    enemy={
         sprite = 70,
         x = 22,
         y = 3
@@ -8,9 +8,11 @@ function create_enemies()
     end 
 
 function update_enemies()
+foreach(enemy,enemy_move)
+end
 
 end
 
 function draw_enemies()
-
+foreach(enemy,draw_enemy)
 end
